@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+      <title>Skjema, tabeller og CSS</title>
+  </head>
+  <body>
+
+    <h1>Skjema<h1>
+
+      <form action="Register.html"> <!--Oppretter et skjema og sier at informasjonen til skjemaet skal sendes til register.hmtl-->
+        <label>Navn:</label> <!--Lager en tekst som breskriver innskrivingsfeltet-->
+        <input type="text" name="Navn" required placeholder="Hva heter du?"> <!--lager et input-felter av typen tekst-->
+        <label>Alder:</label> <!--lager en beskrivende tekst-->
+        <input type="number" name="Alder" required placeholder="Skriv inn alder"> <!--lager en input felt av typen nummer for alderen -->
+        <br>
+
+        <label>Dyr</label> <!--Beskrivende tekst-->
+        <br>
+        <input type="radio" value="Vaskebjørn" name="Dyr"><label>Vaskebjørn</label> <!--Lager tre radio-buttons-->
+        <input type="radio" value="Panda" name="Dyr"><label>Panda</label> <!--Når radio-buttons har samme navn-->
+        <input type="radio" value="Katt" name="Dyr"><label>Katt</label> <!--Kan brukeren kun velge en av gangen-->
+        <br>
+
+        <label>Bere flere raccoons</label>
+        <br>
+        <select name="Velg" reguired> <!--Lager en nedtrekksmeny, hvor brukere mp ta et valg-->
+          <option value="">Velg en</option> <!--ved å skrive value="" gjelder ikke denne som et valg-->
+          <option value="Raccoon">Raccoon</option>
+          <option value="Raccoon">Raccoon</option>
+          <option value="Raccoon">Raccoon</option>
+        </select>
+
+        <br> <!--linjeskift-->
+      <button type:"submit">send inn</button> <!--opretter en knapp som registrerer informasjonen-->
+      </form>
+
+
+  </body>
+  </html>
