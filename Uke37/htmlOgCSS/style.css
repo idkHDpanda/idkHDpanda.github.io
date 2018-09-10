@@ -1,0 +1,17 @@
+  Body{
+background-color: lightblue;
+  }
+
+  p{
+    background-color: cyan;
+    padding: 40px;
+  }
+
+  h1{
+    background-color: pink;
+  }
+
+  p,h1{
+    color: white;
+    text-align: center;
+  }
