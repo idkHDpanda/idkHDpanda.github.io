@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Enkel grid</title>
+    <style media="screen">
+
+      main{
+      margin:auto;
+      background-color: pink;
+      width: 700px;
+    }
+
+      main{
+        display: grid; /*Main-elementet skal være en grid*/
+        /*grid-template-columns: 700px 300px;*/ /*Sier at vi skal ha to kolonner, en på 700px og en på 300px*/
+        grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
+        grid-column-gap: 10px; /*Setter på et gap med 10px mellom hver kolonne*/
+        grid-row-gap: 10px; /*setter på et gap mmed 10px mellom hver rad*/
+      }
+      main>article{
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+
+    <main>
+      <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+      <article>grid element 2</article>
+      <article>grid element 3</article>
+      <article>grid element 4</article>
+      <article>grid element 5</article>
+      <article>grid element 6</article>
+      <article>grid element 7</article>
+      <article>grid element 8</article>
+      <article>grid element 9</article>
+      <article>grid element 10</article>
+    </main>
+
+  </body>
+</html>
