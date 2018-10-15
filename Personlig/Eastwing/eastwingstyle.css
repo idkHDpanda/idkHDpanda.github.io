@@ -1,0 +1,43 @@
+body{
+  text-align: center;
+  background-color: antiquewhite;
+  font-family: arial;
+}
+nav{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+ul{
+  list-style-type: none;
+  margin: auto;
+  padding: auto;
+}
+
+ul li{
+  display: inline;
+}
+ul a{
+  text-decoration: none;
+  font-weight: bold;
+  background-color: salmon;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+a:hover{
+  background-color: coral;
+}
+
+img{
+  width: 400px;
+}
+
+#sol{
+}
+#logo2{
+  width: 200px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,111 @@
+body{
+  background-color: lightblue;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: grey;
+  text-align: center;
+}
+
+h1{
+  color: black;
+}
+
+h2{
+  color: purple;
+}
+
+p{
+}
+
+nav{
+  margin-bottom: 30px;
+
+}
+
+ol{
+  list-style-type: none;
+  margin: auto;
+  padding: auto;
+}
+
+ol li{
+  display: inline;
+}
+
+ol a{
+  text-decoration: none;
+  background-color: teal;
+  margin: 1px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+}
+
+a:hover{
+  background-color: pink;
+}
+
+ul{
+  text-align: left;
+}
+
+img{
+  margin: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: auto;
+  width: 300px;
+  border-radius: 5px;
+  height: auto;
+  border: 10px
+  solid; white;
+  display: block;
+  display: inline;
+}
+
+video{
+  width: 300px;
+}
+
+thead tr{
+  background-color: aliceblue;
+}
+
+tbody tr{
+  background-color: papayawhip;
+}
+
+th{
+  text-align: center;
+  padding:7px 14px
+}
+
+td{
+  text-align: center;
+  padding: 7px 14px;
+  border: 2px solid olive;
+}
+
+#rødpanda{
+border-radius: 30px;
+}
+
+#panda1{
+  border-style: dashed;
+  padding:20px;
+  background-color: yellow;
+}
+
+#panda2{
+  border-style: dotted;
+  box-shadow: 20px 20px 20px;
+}
+
+table{
+  text-align: center;
+}
+
+form{
+  text-align: center;
+}

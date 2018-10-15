@@ -1,0 +1,49 @@
+body{
+  background-color: azure;
+}
+
+img{
+  width: 500px;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+h1{
+  text-align: center;
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: 5px;
+  margin:20px;
+}
+
+h2{
+  text-align: center;
+}
+
+#kilder{
+  list-style-type: none;
+}
+
+table{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+tbody{
+  background-color: papayawhip;
+}
+
+th{
+  text-align:
+  padding: 7px 14px;
+  border: 2px solid olive;
+  border-bottom: : 4px solid darkolivegreen;
+}
+
+td{
+  padding: 7px 14px;
+  border: 2px solid olive;
+}

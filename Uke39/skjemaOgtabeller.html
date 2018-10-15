@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>skjema og tabeller</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <head>
+        <h1>Skjema og tabeller</h1>
+      </head>
+    </header>
+
+    <main>
+      <nav>
+        <ol> <!--nummerisert liste-->
+          <li><a href="index.html">Hjem</a></li> <!--Liste med lenker, dette blir til navigerings baren-->
+          <li><a href="Bilder.html">Bilder</a></li>
+          <li><a href="VideoOglyd.html">video og lyd</a></li>
+          <li><a href="skjemaOgtabeller.html">skjema og tabeller</a></li>
+        </ol>
+      </nav>
+
+      <table> <!--tabell-->
+        <thead>
+          <tr> <!--rad-->
+            <th>Navn</th> <!--overskrift-->
+            <th>life</th>
+            <th>idk</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>anna</td> <!--innhold-->
+            <td>trash</th>
+            <td>yes i know</td>
+          <tr>
+          </tbody>
+      </table>
+      <br>
+
+      <form action="index.html"> <!--Oppretter et skjema og sier at informasjonen til skjemaet skal sendes til register.hmtl-->
+        <label>Navn:</label> <!--Lager en tekst som breskriver innskrivingsfeltet-->
+        <input type="text" name="Navn" required placeholder="Hva heter du?"> <!--lager et input-felter av typen tekst-->
+        <label>Alder:</label> <!--lager en beskrivende tekst-->
+        <input type="number" name="Alder" required placeholder="Skriv inn alder"> <!--lager en input felt av typen nummer for alderen -->
+        <br>
+
+        <label>Dyr</label> <!--Beskrivende tekst-->
+        <br>
+        <input type="radio" value="Vaskebjørn" name="Dyr"><label>Vaskebjørn</label> <!--Lager tre radio-buttons-->
+        <input type="radio" value="Panda" name="Dyr"><label>Panda</label> <!--Når radio-buttons har samme navn-->
+        <input type="radio" value="Katt" name="Dyr"><label>Katt</label> <!--Kan brukeren kun velge en av gangen-->
+        <br>
+
+        <label>Bere flere raccoons</label>
+        <br>
+        <select name="Velg" reguired> <!--Lager en nedtrekksmeny, hvor brukere må ta et valg-->
+          <option value="">Velg en</option> <!--ved å skrive value="" gjelder ikke denne som et valg-->
+          <option value="Raccoon">Raccoon</option>
+          <option value="Raccoon">Raccoon</option>
+          <option value="Raccoon">Raccoon</option>
+        </select>
+        <br> <!--linjeskift-->
+
+      <button type:"submit">send inn</button> <!--opretter en knapp som registrerer informasjonen-->
+
+      <input type="color" name="velg en">
+      <br>
+
+      <input type="password" name="passord" required placeholder="skriv inn passordet">
+
+      <input type="date" name="dato">
+      </form>
+
+      </form>
+    </main>
+  </body>
+</html>

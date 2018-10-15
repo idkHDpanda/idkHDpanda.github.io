@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prøve selv side 64</title>
+
+
+    <style media="screen">
+
+    h1{
+      text-align: center;
+      background-color: coral;
+      border-radius: 5px;
+    }
+
+    tbody td:hover{ /*Oppgave 2*/
+      background-color: coral;
+    }
+
+    thead > tr{
+      background-color: aliceblue;
+    }
+
+    tbody > tr{
+      background-color: papayawhip;
+    }
+
+    th{
+      text-align: left;
+      padding: 7px 14px;
+      border:2px solid olive;
+      border-bottom: 4px solid darkolivegreen;
+    }
+
+    td{
+      padding: 7px 14px;
+      border: 2px solid olive;
+    }
+    table.striped>tbody>tr:nth-child(odd){
+      background-color: springgreen;
+    }
+
+    </style>
+
+
+
+
+  </head>
+  <body>
+
+    <header>
+      <h1>Kombinasjoner av selektorer og tabeller</h1>
+    </header>
+
+    <main>
+
+      <table class="striped">
+        <thead>
+          <tr>
+            <th>År</th>
+            <th>Låt</th>
+            <th>Artist</th>
+            <th>Avspiller</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>År</td>
+            <td>Låt</td>
+            <td><a href="CSS-selektor.html">Artist</a></td>
+            <td>
+              <audio src="super_blues.mp3" controls>
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>År</td>
+            <td>Låt</td>
+            <td><a href="CSS-selektor.html">Artist</a></td>
+            <td>
+              <audio src="super_blues.mp3" controls>
+
+
+              </audio>
+            </td>
+          </tr>
+          <tr>
+            <td>År</td>
+            <td>Låt</td>
+            <td><a href="CSS-selektor.html">Artist</a></td>
+            <td>
+              <audio src="super_blues.mp3" controls>
+
+              </audio>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+
+    </footer>
+
+  </body>
+</html>
