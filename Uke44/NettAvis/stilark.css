@@ -1,0 +1,87 @@
+body{
+  margin: 0;
+}
+
+header{
+  position: fixed;
+  top:0px;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
+  background-color: pink;
+  margin-bottom: 5px;
+}
+
+#logo>h2{
+  font-size: 50px;
+  color: white;
+  padding-left: 10px;
+  font-family: helvetica, sans-serif;
+  margin: 1px;
+}
+
+header>.lenke{
+  align-self: center;
+}
+
+
+.usynlig{
+  opacity: 0%;
+}
+
+header>.lenke>a{
+  color: white;
+  text-decoration: none;
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  grid-gap: 5px;
+}
+
+img{
+  width: 100%;
+  height:90%;
+}
+
+main>section{
+  background-color: lightblue;
+  padding: 5px;
+}
+
+.middelssak{
+  grid-column: span 2;
+  grid-row: span 2;
+
+}
+
+.litensak1{
+  grid-column: span;
+  grid-row: span;
+}
+
+.litensak2{
+  grid-column: span;
+  grid-row: span;
+}
+
+.litensak3{
+  grid-column: span;
+  grid-row: span;
+}
+.litensak4{
+  grid-column: span;
+  grid-row: span;
+}
+.litensak5{
+  grid-column: span;
+  grid-row: span;
+}
+
+.storsak{
+  grid-column: span 3;
+  grid-row: span 3;
+}

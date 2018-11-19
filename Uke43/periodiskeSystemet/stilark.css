@@ -1,0 +1,71 @@
+body{
+  font-family: helvetica, sans-serif;
+  background-color: darkorange;
+}
+
+h1{
+  text-align: center;
+  color:white;
+}
+
+div{
+  background-color: white;
+  padding-left:10px;
+}
+
+section{
+  display:grid;
+  grid-gap:4px;
+  /*grid-template-columns: 40px 40px 40px;*/
+  /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(19, 1fr); /*antall kolonner*/
+  /*grid-auto-rows: 50px;*/ /*Her så kan man ikke ha mye tekst*/
+  grid-auto-rows: minmax(40px, atuo;)/*sier hvor mye som kan være inne i boksene*/
+}
+
+.tall{
+  background-color: darkorange;
+}
+
+.span-2{
+  grid-column: span 2;
+}
+.span-3{
+  grid-column: span 3;
+}
+
+.span-4{
+  grid-column: span 4;
+}
+
+.span-5{
+  grid-column: span 5;
+}
+
+.span-10
+{
+  grid-column:span 10;
+}
+
+.span-16{
+  grid-column: span 16;
+}
+
+.span-17{
+  grid-column: span 17;
+}
+
+.span-18{
+  grid-column: span 18;
+}
+
+.span-19{
+  grid-column: span 19;
+}
+
+.usynlig{
+  opacity: 0; /*Gjør rute 2 usynlig*/
+}
+.span-nedover{
+  grid-row: span 3;
+}
