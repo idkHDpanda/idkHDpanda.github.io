@@ -1,6 +1,6 @@
 
 header{
-  margin-left: 160px;
+  margin-left: 190px;
   font-size: 35px;
   font-family: sans-serif;
   text-align:center;
@@ -43,6 +43,7 @@ body{
   margin-top: 10px;
   margin-right:40px;
   border-radius: 5px;
+  border-style: solid;
 }
 
 .sidenav a:hover{
@@ -59,7 +60,6 @@ main{
   margin-right: 50px;
   margin-bottom:30px;
   font-size: 15px;
-  padding: 0px 10px;
   top: 0;
   display: grid;
   grid-row-gap: 30px;
