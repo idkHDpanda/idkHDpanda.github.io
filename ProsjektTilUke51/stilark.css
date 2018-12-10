@@ -5,12 +5,38 @@ header{
   font-family: sans-serif;
   text-align:center;
   top: 0px;
+  color: white;
 }
+
+/*parallax*/
+.layer0{
+  }
+
+.layer1{
+
+}
+
+.layer2{
+
+}
+
+.layer3{
+
+}
+
+.layer4{
+
+}
+
+.layer5{
+
+}
+
 
 body{
   margin: 0;
   font-family: sans-serif;
-  background-color: white;
+  background-color: red;
 }
 
 #storbilde>img{
@@ -124,12 +150,12 @@ grid-template-columns: repeat(7, 1fr)
   grid-rows: span 1;
 }
 
-.ServerB{
+.InfoBilder{
  grid-column: span 3;
  grid-row: span 2;
 }
 
-.ServerT{
+.InfoTekst{
   grid-column: span 4;
   grid-row: span 2;
 }
