@@ -1,0 +1,215 @@
+html{
+
+}
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+  background-color: lightblue;
+}
+
+header{
+  margin-left: 190px;
+  font-size: 35px;
+  font-family: sans-serif;
+  text-align:center;
+  top: 0px;
+  color: white;
+}
+
+/*parallax*/
+
+.parallax-container{
+
+}
+
+
+
+#storbilde>img{
+  width: 50%;
+}
+
+#logo{
+  width: 150px;
+}
+
+.sidenav{
+  background-color: #1A1A1A;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  margin-top: 0;
+  overflow-x: hidden;
+}
+
+.sidenav nav section{
+  padding: 6px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  background-color: #FAB417;
+  margin-top: 10px;
+  margin-right:40px;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.sidenav a:hover{
+  color: #A93F24;
+  background-color:white;
+}
+
+nav{
+margin-top: 40px;
+}
+
+main{
+  margin-left: 250px;
+  margin-right: 50px;
+  margin-bottom:30px;
+  font-size: 15px;
+  top: 0;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-column-gap:20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+main > section{
+  background-color: pink;
+}
+
+#storbilde{
+  grid-column:span 3;
+  grid-row: span 3;
+  text-align: center;
+}
+
+.litenbilde{
+  grid-column: span 1;
+  grid-rows: span 1;
+}
+
+table{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead>tr{
+  background-color: #A93F24;
+}
+
+tbody{
+  background-color: #FAB417;
+}
+
+th{
+  padding: 7px 14px;
+  border: 2px solid black;
+}
+
+td{
+  padding: 7px 14px;
+  border: 2px solid black;
+}
+
+
+
+
+#OmOss{
+display: grid;
+grid-template-columns: repeat(7, 1fr)
+}
+
+#Profil{
+  grid-column:span 1;
+  grid-rows: span 1;
+  margin: auto;
+}
+
+.InfoBilder{
+ grid-column: span 3;
+ grid-row: span 2;
+}
+
+.InfoBilder img{
+  width: 400px;
+}
+
+.InfoTekst{
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.InfoTekst p{
+  font-size: 18px;
+}
+
+#Error{
+  grid-column: span 7;
+  grid-row: span 7;
+}
+
+
+.GallogHigh{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 360px;
+  margin-right: 160px;
+  text-align: center;
+
+}
+
+.art>img{
+width: 60%;
+}
+
+.Mer{
+font-size: 30px;
+}
+
+video{
+  width: 500px;
+}
+
+
+
+
+#hemmeligSide{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+#tekst{
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+#hewwo>a{
+  color:#1A1A1A;
+  opacity: 0;
+}
+
+
+
+
+
+#join>a{
+  font-size: 90px;
+  text-decoration: none;
+  color: black;
+}
+
+#join a:hover{
+color: white;
+background-color: lightblue;
+}
