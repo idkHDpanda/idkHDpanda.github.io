@@ -1,30 +1,105 @@
 html{
-
+  height: 100%;
 }
 
 body{
   margin: 0;
+  color: #fff;
   font-family: sans-serif;
-  background-color: lightblue;
+  background-color: #1A1A1A;
 }
 
-header{
-  margin-left: 190px;
-  font-size: 35px;
-  font-family: sans-serif;
-  text-align:center;
-  top: 0px;
+
+
+/*Side navigasjonsbar*/
+menu{
+  position: fixed;
+}
+
+.sidenav{
+  width: 14em;
+  height: auto;
+  margin: 8em auto 0;
+  font-size: 1em;
+  line-height: 2em;
   color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10em;
 }
 
-/*parallax*/
+.sidenav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-.parallax-container{
+.sidenav ul li{
+  display: block;
+  background-color: #333;
+  height: 2em;
+  padding: 1em 1.5em;
+  position: relative;
+  transition: transform .5s, background-color .5s, color .5s;
+}
 
+.sidenav ul li:nth-child(1){
+  background-color: #00aced;
+}
+
+.sidenav ul li:nth-child(2){
+  background-color: #00a300;
+}
+
+.sidenav ul li:nth-child(3){
+  background-color: #ffc40d;
+}
+
+.sidenav ul li:nth-child(4){
+  background-color: #cb2027;
+}
+
+.sidenav ul li:hover{
+  background-color: #339966;
+  transform: translateX(10em);
+}
+
+.sidenav ul li a{
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.sidenav ul li span{
+  display: block;
+  position: absolute;
+  font-size: 1em;
+  line-height: 2em;
+  height: 2em;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+  right: 0.1666666666667em;
+  color: #f8f6ff;
 }
 
 
 
+
+/*Header i index*/
+header{
+}
+
+
+
+
+
+
+/*Innhold i index*/
 #storbilde>img{
   width: 50%;
 }
@@ -33,44 +108,11 @@ header{
   width: 150px;
 }
 
-.sidenav{
-  background-color: #1A1A1A;
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-  margin-top: 0;
-  overflow-x: hidden;
-}
 
-.sidenav nav section{
-  padding: 6px;
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-  display: block;
-  background-color: #FAB417;
-  margin-top: 10px;
-  margin-right:40px;
-  border-radius: 5px;
-  border-style: solid;
-}
 
-.sidenav a:hover{
-  color: #A93F24;
-  background-color:white;
-}
 
-nav{
-margin-top: 40px;
-}
-
+/*hovedinnhold i index*/
 main{
-  margin-left: 250px;
-  margin-right: 50px;
-  margin-bottom:30px;
   font-size: 15px;
   top: 0;
   display: grid;
@@ -125,6 +167,7 @@ td{
 
 
 
+/*Om Oss*/
 #OmOss{
 display: grid;
 grid-template-columns: repeat(7, 1fr)
@@ -160,6 +203,9 @@ grid-template-columns: repeat(7, 1fr)
 }
 
 
+
+
+/*Galleri og highlights*/
 .GallogHigh{
   display: grid;
   grid-template-columns: 1fr;
@@ -179,37 +225,4 @@ font-size: 30px;
 
 video{
   width: 500px;
-}
-
-
-
-
-#hemmeligSide{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr)
-}
-
-#tekst{
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-#hewwo>a{
-  color:#1A1A1A;
-  opacity: 0;
-}
-
-
-
-
-
-#join>a{
-  font-size: 90px;
-  text-decoration: none;
-  color: black;
-}
-
-#join a:hover{
-color: white;
-background-color: lightblue;
 }
