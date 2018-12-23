@@ -1,10 +1,20 @@
 html{
   height: 100%;
+  overflow-x: hidden;
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  margin-left: 70px;
+  margin-top: 0;
+
 }
 
 body{
   margin: 0;
-  color: #fff;
+  padding: 0;
+  color: white;
   font-family: sans-serif;
   background-color: #1A1A1A;
 }
@@ -14,12 +24,13 @@ body{
 /*Side navigasjonsbar*/
 menu{
   position: fixed;
+  margin-top: 0;
 }
 
 .sidenav{
   width: 14em;
   height: auto;
-  margin: 8em auto 0;
+  margin: 9em 0;
   font-size: 1em;
   line-height: 2em;
   color: white;
@@ -91,57 +102,104 @@ menu{
 
 
 /*Header i index*/
-header{
+#parallax{
+  background-image: url(bilder/Header/layer0.png);
+  height: 580px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 50%;
 }
 
-
-
-
-
-
-/*Innhold i index*/
-#storbilde>img{
-  width: 50%;
+#parallax section h1{
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 24%;
+  font-size: 30px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  background: white;
+  color: #1A1A1A;
+  padding: 20px;
+  opacity: 20%;
+  font-family: impact;
 }
 
-#logo{
-  width: 150px;
+#parallax img{
+ width: 300px;
+ position: absolute;
+ top:18%;
+ left: 57%;
 }
+
 
 
 
 
 /*hovedinnhold i index*/
 main{
-  font-size: 15px;
-  top: 0;
-  display: grid;
-  grid-row-gap: 30px;
-  grid-column-gap:20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  margin-left: 65px;
 }
 
-main > section{
-  background-color: pink;
+#skew{
+  margin-top: -50px;
+  padding: 20px 0;
+  margin-left: 250px;
+  transform: skew(0deg, -8deg);
+  background:#1A1A1A;
 }
 
-#storbilde{
-  grid-column:span 3;
-  grid-row: span 3;
+#index-skew{
+  transform: skew(0deg, 8deg);
+  padding-top: 100px;
+  padding-bottom:0px;
+}
+
+#index-innhold-top{
+  margin-top: 35px;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+#index-innhold-top h2{
   text-align: center;
 }
 
-.litenbilde{
+#index-innhold-mid{
+  margin-top: 60px;
+  margin-left: 70px;
+  margin-right: 70px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+#index-tekst{
+  margin-right: 70px;
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+#index-storbilde img{
+  margin-top: 10px;
+  width: 360px;
+  padding: 10px;
+  border-radius: 5%;
+  background-color: #FAB417;
   grid-column: span 1;
-  grid-rows: span 1;
+  grid-row: span 3;
+}
+
+.tabell{
+  margin-top: 60px;
+  margin-right: 70px;
+  margin-bottom: 85px;
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 table{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
   border-collapse: collapse;
   text-align: left;
 }
@@ -155,74 +213,227 @@ tbody{
 }
 
 th{
-  padding: 7px 14px;
-  border: 2px solid black;
+  padding: 20px 25px;
+  border: 4px solid #1A1A1A;
 }
 
 td{
-  padding: 7px 14px;
-  border: 2px solid black;
+  padding: 20px 25px;
+  border: 4px solid #1A1A1A;
 }
+
+#index-tekst-2{
+  margin-top: 45px;
+  margin-bottom: 45px;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.index-litenbilde img{
+  margin: 30px;
+  margin-left: 33px;
+  margin-bottom: 70px;
+  padding: 15px;
+  border-radius: 1%;
+  background-color: #FAB417;
+  grid-column: span 1;
+  grid-rows: span 1;
+}
+
 
 
 
 
 /*Om Oss*/
+
+#OmOssHead{
+  padding-top: 20px;
+}
+
 #OmOss{
+margin: 0;
 display: grid;
-grid-template-columns: repeat(7, 1fr)
+grid-template-columns: repeat(7,1fr);
+margin-left: 135px;
+margin-right: 70px;
 }
 
-#Profil{
-  grid-column:span 1;
-  grid-rows: span 1;
-  margin: auto;
+.Profil{
+  grid-column: span 1;
+  grid-row: span 1;
 }
 
-.InfoBilder{
- grid-column: span 3;
- grid-row: span 2;
+#OmOss-hover-server{
+  position: absolute;
+  left: 135px;
+  opacity: 0;
 }
 
-.InfoBilder img{
-  width: 400px;
+#OmOss-hover-server:hover{
+  display: block;
+  opacity: 1;
+  transition-duration: 0.4s;
 }
 
-.InfoTekst{
+#OmOss-hover-anna{
+  position: absolute;
+  left: 286px;
+  opacity: 0;
+}
+
+#OmOss-hover-anna:hover{
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+#OmOss-hover-hoang{
+  position: absolute;
+  left: 437px;
+  opacity: 0;
+}
+
+#OmOss-hover-hoang:hover{
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+#OmOss-hover-jace{
+ position: absolute;
+ left: 588.5px;
+  opacity: 0;
+}
+
+#OmOss-hover-jace:hover{
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+#OmOss-hover-solveig{
+  position: absolute;
+  left: 740px;
+  opacity: 0;
+}
+
+#OmOss-hover-solveig:hover{
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+#OmOss-hover-isabel{
+  position: absolute;
+  left: 890.5px;
+  opacity: 0;
+}
+
+#OmOss-hover-isabel:hover{
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+#OmOss-hover-vilde{
+  position: absolute;
+  left: 1042px;
+  opacity: 0;
+}
+
+#OmOss-hover-vilde:hover{
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+.OmOss-bilder{
+  grid-column: span 3;
+  grid-row: span 1;
+  margin-left: 30px;
+  margin-right:20px;
+  margin-top: 40px;
+}
+
+.OmOss-bilder img{
+  width: 350px;
+  border-radius: 5%;
+  padding: 10px;
+  background-color: #FAB417;
+}
+
+.OmOss-tekst{
   grid-column: span 4;
-  grid-row: span 2;
+  grid-row: span 1;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  margin-right: 60px;
 }
 
-.InfoTekst p{
-  font-size: 18px;
+.NexPrev a{
+ text-decoration: none;
+ display: inline-block;
+ padding: 8px 16px;
+ margin-bottom: 30px;
+ margin-top: 30px;
 }
 
-#Error{
-  grid-column: span 7;
-  grid-row: span 7;
+.NexPrev a:hover {
+ background-color: #ddd;
+ color: black;
 }
+
+.previousFørste {
+ background-color: #f1f1f1;
+ color: #1A1A1A;
+ margin-left: 550px;
+ opacity: 0;
+}
+
+.previous {
+ background-color: #f1f1f1;
+ color: #1A1A1A;
+ margin-left: 500px;
+}
+
+.next {
+ background-color: #FAB417;
+ color: white;
+}
+
 
 
 
 
 /*Galleri og highlights*/
-.GallogHigh{
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-left: 360px;
-  margin-right: 160px;
-  text-align: center;
-
+.GallogHighHead h1{
+  padding-top: 20px;
 }
 
-.art>img{
-width: 60%;
+#GallogHigh{
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.Mer{
-font-size: 30px;
+.column{
+  flex: 25%;
 }
 
-video{
-  width: 500px;
+.column img video{
+  margin-top: 10px;
+  vertical-align: middle;
+}
+
+.video{
+ width: 85%;
+ height: auto;
+ margin: 10px;
+}
+
+.art{
+ width: 85%;
+ margin: 10px;
+}
+
+.quote img{
+  width: 95%;
+  margin: 10px;
+  vertical-align: middle;
 }
