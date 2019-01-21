@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAFJFZulEveKOA3XmII4wFSDwd0FhTnTf0",
+        authDomain: "databaserogdatamodeller.firebaseapp.com",
+        databaseURL: "https://databaserogdatamodeller.firebaseio.com",
+        projectId: "databaserogdatamodeller",
+        storageBucket: "databaserogdatamodeller.appspot.com",
+        messagingSenderId: "827082714496"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+
+    <form class="" action="index.html" method="post">
+      <label for="inpNavn">Navn:</label>
+      <input id="inpNavn" type="text" name="Navn" value="" placeholder="Navn">
+
+      <label for="inpTelefon">Telefon:</label>
+      <input id="inpTelefon "type="text" name="Telefon" value="" placeholder="Telefon">
+
+      <button id="btnKnapp" type="button" name="button">Send inn</button>
+
+    </form>
+<!--ikke pensum, får copy past, men burde prøve å lære meg dette for bedre nettsider-->
+    <script type="text/javascript">
+      const db = firebase.database();
+      const kontaktliste = db.ref("kontaktliste");
+
+      const inpNavn = document.querySelector("#inpNavn");
+      const inpTelefon = document.querySelector("#inpTelefon");
+      const btnKnapp = document.querySelector("#btnKnapp");
+
+      btnKnapp.onclick = function(event) {
+        event.preventDefault();
+        let Navn = inpNavn.Value;
+        let Telefon = inpTelefon.Value;
+        kontaktliste.push(
+          {
+            "Name": Navn,
+            "Telephone":Telefon
+          }
+        );
+      }
+
+      kontaktliste.push(
+        {
+          "firstName":"Thor Christian",
+          "lastName": "Coward",
+          "Telephone": 98607653
+        }
+      )
+    </script> <!--tekst har "", nummer har ikke-->
+
+  </body>
+</html>

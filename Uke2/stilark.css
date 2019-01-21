@@ -1,0 +1,88 @@
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap:5px;
+  background-color: yellow;
+}
+
+body{
+  background-image: url("https://images.pexels.com/photos/54602/raccoon-bear-zoo-saeugentier-54602.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media(max-width:1400px){
+  main{
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    background-color: yellow;
+  }
+
+  body{
+    background-image: url("https://images.pexels.com/photos/987954/pexels-photo-987954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media(max-width:1000px){
+  main{
+    grid-template-columns:1fr 1fr 1fr;
+    background-color: green;
+  }
+
+  body{
+    background-image: url("https://images.pexels.com/photos/16605/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media(max-width:800px){
+  main{
+    grid-template-columns:1fr 1fr;
+    background-color: red;
+  }
+
+  body{
+    background-image: url("https://images.pexels.com/photos/289565/pexels-photo-289565.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+}
+
+@media(max-width:600px){
+  main{
+    grid-template-columns:1fr;
+    background-color: blue;
+  }
+  body{
+    background-image: ("https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/*navigasjonsbar*/
+  header>nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @media(max-width:500px){
+    header>nav{
+      flex-direction: column;
+    }
+
+    header>nav>a{
+    
+    }
+  }
+/*navigasjonsbar*/

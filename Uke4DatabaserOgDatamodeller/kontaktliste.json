@@ -1,0 +1,14 @@
+{
+    "kontakliste":{
+      "1":{
+        "firstName":"Thor Christian",
+        "lastName":"Coward",
+        "Telephone":98607653
+    },
+      "2":{
+        "firstName":"Ravi",
+        "lastName":"Manikarnika",
+        "Telephone":12345678
+      }
+    }
+  }

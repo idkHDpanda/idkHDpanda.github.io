@@ -1,0 +1,19 @@
+.burger{
+  display: flex;
+  width: 16px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brod{
+  background-color: brown;
+  width: 15px;
+  height: 3px;
+}
+
+.kjott{
+  background-color: darkred;
+  width: 15px;
+  height: 5px;
+}
