@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAFJFZulEveKOA3XmII4wFSDwd0FhTnTf0",
+        authDomain: "databaserogdatamodeller.firebaseapp.com",
+        databaseURL: "https://databaserogdatamodeller.firebaseio.com",
+        projectId: "databaserogdatamodeller",
+        storageBucket: "databaserogdatamodeller.appspot.com",
+        messagingSenderId: "827082714496"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+
+
+  <body>
+
+    <form class="" method="post">
+      <label for="inpNavn">Navn:</label>
+      <input id="inpNavn" type="text" name="navn" value="" placeholder="navn">
+      <label for="inpTelefon">Telefon:</label>
+      <input id="inpTelefon" type="'text'" name="telefon" value="" placeholder="tlf.">
+      <button id="btnKnapp" type="button" name="button">Send inn</button>
+    </form>
+
+    <script type="text/javascript">
+      const db = firebase.database();
+
+      const kontaktliste = db.ref("kontaktliste");
+      const inpNavn = document.querySelector("#inpNavn");
+      const inpTelefon = document.querySelector("#inpTelefon");
+      const btnKnapp = document.querySelector("#btnKnapp");
+      btnKnapp.onclick = function(event){
+        event.preventDefault();
+        let navn = inpNavn.value;
+        let telefon = inpTelefon.value;
+        kontaktliste.push(
+          {
+            "name": navn,
+            "telephone": telefon
+          }
+        );
+      }
+    </script> <!--tekst har "", nummer har ikke-->
+
+<!--meldinger-->
+<h1>Chat</h1>
+<article id="txtMeldinger"></article>
+
+    <script type="text/javascript">
+      let txtMeldinger = document.getElementByld("txtMeldinger");
+
+      let database = firebase.database();
+      let meldinger = database.ref("meldinger");
+      let nyMelding = {
+        "avsender":"Jay",
+        "tekst":"Sup"
+      };
+      meldinger.push(nyMelding);
+      function visMelding(snapshot){
+        var melding = snapshot.val();
+        txtMeldinger.innerHTML+=`<p>${melding.avsender}sier
+        ${melding-tekst}</p>`;
+      }
+      meldinger.on("child.added",visMelding)
+    </script>
+
+    <form id="Skjema" action="index.html" method="post">
+      <input type="text" id="inpAvsender" name="" value="" required placeholder="Hvem er du?">
+      <input type="text" id="inpMening" name="" value="" required placeholder="Hva sier du?">
+      <button type="submit" class="button" name="button">OK</button>
+    </form>
+
+    <article id="txtMeldinger"></article>
+  </body> <!--Ikke ferdig, små problemer-->
+</html>

@@ -12,3 +12,16 @@
       }
     }
   }
+
+{
+  "meldinger":{
+    "1":{
+      "avsender":"Ann",
+      "tekst":"Hewwo"
+    },
+      "2":{
+        "avsender":"Jay",
+        "tekst":"Sup"
+      }
+  }
+}
