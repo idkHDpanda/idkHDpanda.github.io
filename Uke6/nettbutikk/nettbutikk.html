@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBxJdQfbyVLNBDFwh0CZmdUW-6b4QywZXs",
+        authDomain: "uke-6-nettbutikk.firebaseapp.com",
+        databaseURL: "https://uke-6-nettbutikk.firebaseio.com",
+        projectId: "uke-6-nettbutikk",
+        storageBucket: "",
+        messagingSenderId: "1094694258041"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button onclick="visAlleVarer()">Alle varer</button>
+        <button onclick="visBukser()">Busker</button>
+        <button onclick="visSkjorter()">Skjorter</button>
+        <button onclick="visHandlekurv()">handlekurv</button>
+        <button onclick="">Tøm handlekurv</button>
+      </nav>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "1":{
+    "svar":"Primærnøkkel er en unik *nøkkel* til hvert *objekt* i en database. Noe som gjør det lettere å søke i databasen. Det er også en måte å skille mellom objekter med lik verdi. For eksempel, To bøker med samme navn."
+  },
+  "2":{
+    "a":{
+      "svar":"Primærnøkler for elever på en skole kan være personnummer, navn."
+    },
+    "b":{
+      "svar":"Primærnøkler for fritidsbåter kan være type båt, IDnummer."
+    },
+    "c":{
+      "svar":"Primærnøkler for planter kan være type planter."
+    },
+    "d":{
+      "svar":"Primærnøkler for kontaktene mine kan være mobilnummer, navn."
+    },
+    "e":{
+      "svar":"Primærnøkler for stjerner på himmelen kan være navn på stjernene."
+    }
+  },
+  "3":{
+    "svar":"En kandidatnøkkel er alle alternativene som kan kan brukes som primærnøkkel. Eks: personnummer, mobilnummer, E-post adresse, Kundenummer, bukernavn, ISBN-nummer."
+  },
+  "4":{
+    "svar":"En fremmednøkkel er en primærnøkkel som blir brukt i andre steder for å unngå dobbeltlagring."
+  },
+  "5":{
+    "svar":"Normalisering er teknikker som brukes for å unngå dobbeltlagring"
+  },
+  "6":{
+    "Spillere":{
+      "HDpanda":{
+        "highscore":"1000",
+        "sistSpilt":"28.01.2019",
+        "mail":"..."
+      },
+      "Airborn":{
+        "highscore":"2000",
+        "sistSpilt":"28.01.2019",
+        "mail":"..."
+      },
+      "LingLing":{
+        "highscore":"3000",
+        "sistSpilt":"28.01.2019",
+        "mail":"..."
+      },
+      "Letugo":{
+        "highscore":"4000",
+        "sistSpilt":"28.01.2019",
+        "mail":"..."
+      }
+    }
+  },
+  "7":{
+    "Filmer":{
+      "film-1":{
+        "FilmID":"3",
+        "TITTEL":"Sharknado",
+        "REGISSØR":"Bob Stern",
+        "INFORMASJON":"Universal Studios, 2004",
+      },
+      "film-2":{
+        "FilmID":"5",
+        "TITTEL":"Star Wars",
+        "REGISSØR":"Steven Spielberg",
+        "INFORMASJON":"Paramount, 2004",
+      },
+      "film-3":{
+        "FilmID":"8",
+        "TITTEL":"E.T",
+        "REGISSØR":"Steven Spielberg",
+        "INFORMASJON":"Paramount, 2009",
+      }
+    }
+  }
+}

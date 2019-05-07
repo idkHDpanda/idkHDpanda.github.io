@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Databaseprosjekt</title>
+
+    <!--link for css-->
+    <link rel="stylesheet" href="stilark.css">
+
+    <!--iconer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--tilkobling til firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCKtuz8QYoaZ6YV4CE0xkaAq34lt4_4ZYI",
+        authDomain: "databaseprosjekt-f3f91.firebaseapp.com",
+        databaseURL: "https://databaseprosjekt-f3f91.firebaseio.com",
+        projectId: "databaseprosjekt-f3f91",
+        storageBucket: "databaseprosjekt-f3f91.appspot.com",
+        messagingSenderId: "984324989744"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+
+
+  <body>
+    <header>
+      <!--Logo-->
+      <a href="index.html"><img id=Logo src="bilder./LvLUPLogo.png" alt=""></a>
+
+  <!--Søkebar-->
+      <input type="text" id="søkebar" name="" value="Søk her">
+      <button type="submit" id="enter" style="font-size:20px"><i class="fa fa-search"></i></button>
+
+<!--Register-->
+      <button id="sign" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email"><b>Email</b></label>
+            <input class="signInput" type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input class="signInput" type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input class="signInput" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--Logg inn-->
+      <button id="login" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+      <div id="id02" class="modalLogin">
+
+        <form class="modal-contentLogin animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="closeLogin" title="Close Modal">&times;</span>
+          </div>
+
+          <div class="containerLogin">
+            <label for="uname"><b>Username</b></label>
+            <input class="loginInput" type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input class="loginInput" type="password" placeholder="Enter Password" name="psw" required>
+
+            <button id="loginSub" type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="containerLogin" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelB">Cancel</button>
+            <span class="pswLogin">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+        </div>
+      <!--Navigasjon-->
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Hjem</a>
+            <a href="ps4.html">PS4</a>
+            <a href="switch.html">Switch</a>
+            <a href="pc.html">PC</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id=Vare>
+
+    </main>
+
+    <footer>
+      <h3>Kontakt oss:</h3>
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/login?lang=no" class="fa fa-twitter"></a>
+      <a href="https://www.instagram.com/?hl=nb" class="fa fa-instagram"></a>
+  </footer>
+
+  <script>
+    const main = document.querySelector("main");
+
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let parent = url.searchParams.get("parent");
+    let key = url.searchParams.get("key");
+
+    console.log("Spill/"+parent+"/"+key);
+
+    const db = firebase.database();
+    const vare = db.ref("Spill/"+parent+"/"+key);
+
+    vare.on("value",genererHTML);
+
+    function genererHTML(snapshot){
+        let spill = snapshot.val();
+        let key = snapshot.key;
+        let parent = snapshot.ref.parent.key;
+        main.innerHTML +=`
+            <article class="spill">
+              <div id="bildeDiv"><img src="${spill.Media1}" alt=""></div>
+               </article>
+            <article>
+            <h1><b>${spill.Tittel}</b></h1>
+            <p class="pris"><b>Pris: ${spill.Pris}</b></p>
+            <p>${spill.Beskrivelse}</p>
+            </article>
+
+
+        `;
+    }
+    </script>
+
+  </body>
+</html>

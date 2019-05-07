@@ -1,0 +1,809 @@
+body{
+  margin-left: 120px;
+  margin-right: 120px;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+/*Header*/
+#Logo{
+  width: 100px;
+  margin-left: 10px;
+}
+
+/*søkebar*/
+#søkebar{
+  width: 500px;
+  height: 35px;
+  position: absolute;
+  left: 250px;
+  top: 30px;
+  border-radius: 2px;
+}
+
+#enter{
+  position: absolute;
+  width: 60px;
+  height: 41px;
+  left: 695px;
+  top: 30px;
+  background-color: coral;
+  border: none;
+  border-radius: 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#enter :hover {
+  color: white;
+}
+
+/*registrering/logg inn*/
+/* Full-width input fields */
+.signInput[type=text], .signInput[type=password] {
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+.signInput[type=text]:focus, .signInput[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+#sign{
+  background-color: coral;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  position: relative;
+  bottom: 30px;
+  left: 720px;
+
+}
+
+#sign:hover {
+  color: white;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  border: none;
+}
+
+.signupbtn{
+  padding: 14px 20px;
+  border: none;
+  background-color: #4CAF50;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.cancelbtn:hover, .signupbtn:hover {
+  opacity: 0.8;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 65%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+/* Full-width input fields */
+.loginInput[type=text], .loginInput[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#login {
+  background-color: coral;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  position: relative;
+  bottom: 30px;
+  left: 730px;
+}
+
+#login:hover{
+  color:white;
+}
+
+#loginSub{
+  background-color: #4CAF50;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+}
+
+#loginSub:hover{
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelB {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  border: none;
+}
+
+.cancelB:hover{
+  opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainerLogin {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.containerLogin {
+  padding: 16px;
+}
+
+span.pswLogin {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modalLogin {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-contentLogin {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 65%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.closeLogin {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.closeLogin:hover,
+.closeLogin:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/*Navigasjon*/
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav li a{
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover{
+  background-color: coral;
+}
+
+
+
+
+/*Main-Index*/
+/*slider*/
+.galleryContainer{
+  width: 100%;
+  height: 400px;
+  max-width: 100%;
+  user-select: none;
+  box-shadow: 0px 0px 3px 1px #00000078;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.galleryContainer .slideShowContainer{
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: gainsboro;
+  position: relative;
+}
+
+.galleryContainer .slideShowContainer .imageHolder{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+.galleryContainer .slideShowContainer .imageHolder img{
+  width:100%;
+  height:100%;
+}
+
+/*slider arrow holder*/
+.galleryContainer .slideShowContainer .leftArrow, .galleryContainer .slideShowContainer .rightArrow{
+  width: 50px;
+  background: #00000036;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: background 0.5s;
+  height: 73px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+}
+
+.galleryContainer .slideShowContainer .rightArrow{
+  left: auto;
+  right: 0;
+  border-top-right-radius:0;
+  border-bottom-right-radius:0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.galleryContainer .slideShowContainer .leftArrow:hover,.galleryContainer .slideShowContainer .rightArrow:hover{
+  background: #000000a8;
+  cursor: pointer;
+}
+
+/*arrow*/
+.galleryContainer .slideShowContainer .arrow{
+  display: inline-block;
+  border: 3px solid white;
+  width: 10px;
+  height: 10px;
+  border-left: none;
+  border-bottom: none;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.galleryContainer .slideShowContainer .arrow.arrowLeft{
+  transform: rotateZ(-135deg);
+}
+
+.galleryContainer .slideShowContainer .arrow.arrowRight{
+  transform: rotateZ(45deg);
+}
+
+/*dotter*/
+.galleryContainer #dotsContainer{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.galleryContainer #dotsContainer .dots{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: #bbb;
+    cursor: pointer;
+    transition:background-color 0.5s;
+}
+.galleryContainer #dotsContainer .dots:first-child{
+    margin-left: 0;
+}
+.galleryContainer #dotsContainer .dots:hover,.galleryContainer #dotsContainer .dots.active{
+    background-color: #717171;;
+}
+
+/*neste slide*/
+.galleryContainer .moveLeftCurrentSlide{
+    animation-name: moveLeftCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+.galleryContainer .moveLeftNextSlide{
+    animation-name: moveLeftNext;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+@keyframes moveLeftCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: -100%;opacity: 1;}
+}
+
+@keyframes moveLeftNext {
+    from {margin-left: 100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
+}
+
+.galleryContainer .moveRightCurrentSlide{
+    animation-name: moveRightCurrent;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+.galleryContainer .moveRightPrevSlide{
+    animation-name: moveRightPrev;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+@keyframes moveRightCurrent {
+    from {margin-left: 0;opacity: 1;}
+    to {margin-left: 100%;opacity: 1;}
+}
+
+@keyframes moveRightPrev {
+    from {margin-left: -100%;opacity: 1;}
+    to {margin-left: 0%;opacity: 1;}
+}
+
+/*ekstra: nettsider*/
+.nyheter{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  grid-gap: 2em;
+  align-items: center;
+}
+
+.nyheter .nyhet1{
+  grid-column: span 5;
+}
+
+.nyheter .nyhet2{
+  grid-column: span 5;
+}
+
+.nyheter .nyhet3{
+  grid-column: span 2;
+}
+
+.nyheter .mini{
+  border: 5px solid #333;
+  grid-column: span 1;
+  border-radius: 2px;
+}
+
+.nyheter img{
+  width: 100%;
+}
+
+.nyheter .mini img{
+  width: 100%;
+}
+
+
+
+
+
+/*Main-Spill*/
+#kategori{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2em;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#kategori img{
+  width:100%;
+}
+
+.spill{
+  height: 375px;
+  position: relative;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: #e9e9e9;
+}
+
+.spill .merInfo{
+  width: 100%;
+  height: 25px;
+  border: none;
+  border-radius: 2px;
+  padding-top: 10px;
+  background-color: coral;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.spill .merInfo:hover{
+  color: white;
+}
+
+.spill p{
+  font-size: 15px;
+  margin: 5px;
+  text-align: center;
+}
+
+#bildeDiv{
+height: 280px;
+}
+
+/*spørre knappene*/
+.spørringer{
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  top: 170px;
+  left: 10px;
+}
+
+.spørringer button{
+  width: 100px;
+  border-radius: 2px;
+  border:none;
+  padding: 8px;
+  margin-top:3px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+
+}
+
+.spørringer button:hover{
+  background-color: coral;
+}
+
+
+
+
+/*Main-vare*/
+#Vare{
+  background-color: #e9e9e9;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1em;
+  min-height: 600px;
+  margin-top: 20px;
+}
+
+#Vare img{
+  width: 100%;
+  margin-top: 25px;
+}
+
+#Vare p, #Vare li{
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+#Vare h1{
+  font-size: 30px;
+}
+
+#Vare article .pris{
+  font-size: 25px;
+}
+
+#Vare li{
+  margin-left: 15px;
+}
+
+/*footer-sosiale medier/info*/
+footer{
+  background-color: #333;
+  border-radius: 2px;
+}
+
+footer h3{
+  color: white;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+footer a{
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 0px 20px 10px;
+  border-radius: 2px;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.galleryContainer{
+  width: 100%;
+  height: 400px;
+  max-width: 100%;
+  user-select: none;
+  box-shadow: 0px 0px 3px 1px #00000078;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+
+
+
+/*mobilvennlig*/
+@media (max-width: 660px) {
+
+body {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#søkebar{
+  width: 280px;
+  position: absolute;
+  height: 30px;
+  left: 130px;
+  top: 37px;
+  border-radius: 2px;
+    }
+
+#enter{
+  position: absolute;
+  width: 60px;
+  height: 36px;
+  left: 355px;
+  top: 37px;
+  background-color: coral;
+  border: none;
+  border-radius: 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#kategori{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: 110px;
+}
+
+#kategori img{
+  width:100%;
+}
+
+.spill{
+  height: 355px;
+  position: relative;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: #e9e9e9;
+}
+
+.spill .merInfo{
+  width: 100%;
+}
+
+.spill p{
+  font-size: 15px;
+  margin: 5px;
+  text-align: center;
+}
+
+#bildeDiv{
+  height: 240px;
+}
+
+#Vare{
+  background-color: #e9e9e9;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1em;
+  min-height: 600px;
+  margin-top: 20px;
+}
+
+.kjøp{
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+  background-color: coral;
+  border: none;
+  border-radius: 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  padding: 12px 16px;
+}
+
+.cancelbtn, .signupbtn {
+   width: 100%;
+}
+
+#sign{
+  position: relative;
+  left: 310px;
+  bottom: 28px;
+}
+
+#login{
+  position: relative;
+  left: 320px;
+  bottom: 28px;
+}
+
+span.pswLogin {
+ display: block;
+ float: none;
+}
+
+.cancelB {
+  width: 100%;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+.modal-contentLogin {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+}

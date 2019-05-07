@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCwXgqdzFNjadR0I87iRqyvbO2oL00pzTg",
+        authDomain: "uke6-2169f.firebaseapp.com",
+        databaseURL: "https://uke6-2169f.firebaseio.com",
+        projectId: "uke6-2169f",
+        storageBucket: "uke6-2169f.appspot.com",
+        messagingSenderId: "455537877893"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <link rel="stylesheet" href="database.css">
+  </head>
+  <body>
+    <!--
+    <script type="text/javascript">
+      const db = firebase.database();
+      const bloggere = db.ref("bloggere");
+
+//pusher et objekt til databasen
+      bloggere.push({
+        "navn":"Sophie Elise",
+        "følgere":"59000",
+        "alder":"23",
+      });
+
+//pusher to strings til databasen
+      bloggere.push("Pappahjerte");
+      bloggere.push("Annijor");
+
+//bloggere.remove();  - fjerner alt med bloggere
+
+      const billGates = bloggere.child(90440000);
+      billGates.set({
+        "navn":"Bill Gates",
+        "e-post":"bill@microsoft.com"
+      });
+
+//å skrive noe med samme primærnøkkel vil overskrive den første
+      const SteveJobs = bloggere.child(90440000);
+      SteveJobs.set({
+        "navn":"Steven Jobs",
+        "e-post":"steve@apple.com"
+      });
+
+//Endre data
+      SteveJobs.update({
+        "navn":"Jeff Bezos"
+      })
+    </script>
+-->
+<h1>Registrere dine egne kontakter</h1>
+
+    <section>
+      <form id="skjema">
+          <input id="inpNavn" type="tekst" required placeholder="navn">
+          <input id="inpTelefon" type="text" required placeholder="telefon">
+          <input id="inpEpost" type="text" required placeholder="epost">
+          <button type="submit">Registrer kontakt</button>
+      </form>
+    </section>
+
+    <section id="secKontakter">
+    </section>
+
+<script src="main.js" charset="utf-8"></script>
+  </body>
+</html>

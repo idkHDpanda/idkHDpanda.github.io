@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon Gen.1:</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCxRjnBujSkWyDpoat-i27bVE6J0XVw1CM",
+        authDomain: "uke7-pokemon.firebaseapp.com",
+        databaseURL: "https://uke7-pokemon.firebaseio.com",
+        projectId: "uke7-pokemon",
+        storageBucket: "uke7-pokemon.appspot.com",
+        messagingSenderId: "155481683678"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+    <main>
+
+
+      <section id="secPoke">
+
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      const db = firebase.database();
+      const pokemon = db.ref("pokemon");
+
+      const secPoke = document.querySelector("#secPoke");
+
+      Pokemon
+        .orderByChild("")
+        
+    </script>
+  </body>
+</html>

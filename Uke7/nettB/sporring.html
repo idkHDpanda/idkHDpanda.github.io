@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDdZNn-Pliv7-YV0mYVferSRAuf5cvwHl0",
+        authDomain: "uke7-sporringer.firebaseapp.com",
+        databaseURL: "https://uke7-sporringer.firebaseio.com",
+        projectId: "uke7-sporringer",
+        storageBucket: "uke7-sporringer.appspot.com",
+        messagingSenderId: "826034915183"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+    <main>
+      <button type="button" name="button" onclick="sorterPris()">Laveste pris</button>
+
+      <section id="secVarer">
+
+      </section>
+    </main>
+
+
+    <script type="text/javascript">
+      const db = firebase.database();
+      const jakker = db.ref("varer/jakker");
+      const sko = db.ref("varer/sko");
+
+      const secVarer = document.querySelector("#secVarer");
+
+      function visVare(snapshot) {
+        console.log(snapshot.val());
+        let vare = snapshot.val();
+        secVarer.innerHTML +=`
+          <h1>${vare.merke}: ${vare.modell}</h>
+          <p>Pris: ${vare.pris}</p>
+        `
+      }
+
+/*    jakker.on("child_added",visVare);
+      sko.on("child_added",visVare);     */
+
+/*    sko//referanse til databsen
+        .orderByChild("pris")//sorteringsfunksjon
+        .limitToFirst(2)//sorteringsfunksjon
+        .on("child_added",visVare);//spørrefunksjon */
+
+        function sorterPris(){
+          sko
+            .orderByChild("pris")
+            .limitToFirst(2)
+            .on("child_added",visVare);
+        }
+    </script>
+  </body>
+</html>

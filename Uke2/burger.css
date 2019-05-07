@@ -17,3 +17,9 @@
   width: 15px;
   height: 5px;
 }
+
+@media (max-width: 338px) {
+  body {
+    background-color: lightblue;
+  }
+}
